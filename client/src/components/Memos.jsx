@@ -13,7 +13,7 @@ const Memos=({state})=>{
     },[contract])
     return (
         <div className="container-fluid">
-        <h1 style={{ textAlign: "center", marginTop: "20px" }}>Chai Feedback</h1>
+        <h1 className="hht">Chai Feedback</h1>
         <table style={{ width: "100%", borderCollapse: "collapse", }}>
           <thead>
             <tr>
@@ -54,4 +54,5 @@ const tableCellStyle = {
   border: "1px solid white",
   padding: "7px",
   width: "25%",
+  textAlign:"center"
 };
