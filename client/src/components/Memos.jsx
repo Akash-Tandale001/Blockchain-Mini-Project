@@ -13,68 +13,45 @@ const Memos=({state})=>{
     },[contract])
     return (
         <div className="container-fluid">
-          <h3 style={{ textAlign: "center", marginTop: "20px" }}>Messages</h3>           
-                <table>
-                <tbody >
-          {memos.map((memo) => {
-            return (
-                    <tr >
-                      <td 
-                        style={{
-                          backgroundColor: "dodgerblue",
-                          border: "1px solid white",
-                          borderCollapse: "collapse",
-                          padding: "7px",
-                          width: "100px",
-                          color:"white",
-                         
-                        }}
-                      >
-                        {memo.name}
-                      </td>
-                      <td 
-                        style={{
-                          backgroundColor: "dodgerblue",
-                          border: "1px solid white",
-                          borderCollapse: "collapse",
-                          padding: "7px",
-                          width: "800px",
-                          color:"white"
-                        }}
-                      >
-                        {new Date(memo.timestamp * 1000).toLocaleString()}
-                      </td>
-                      <td  
-                        style={{
-                          backgroundColor: "dodgerblue",
-                          border: "1px solid white",
-                          borderCollapse: "collapse",
-                          padding: "7px",
-                          width: "300px",
-                          color:"white"
-                        }}
-                      >
-                        {memo.message}
-                      </td>
-                      <td  className="container-fluid"
-                        style={{
-                          backgroundColor: "dodgerblue",
-                          border: "1px solid white",
-                          borderCollapse: "collapse",
-                          padding: "7px",
-                          width: "400px",
-                          color:"white"
-                        }}
-                      >
-                        {memo.from}
-                      </td>
-                    </tr>
-             
-            );
-          })}
-               </tbody>
-                </table>
-        </div>
+        <h1 style={{ textAlign: "center", marginTop: "20px" }}>Chai Feedback</h1>
+        <table style={{ width: "100%", borderCollapse: "collapse", }}>
+          <thead>
+            <tr>
+              <th style={tableHeaderStyle}>Timestamp</th>
+              <th style={tableHeaderStyle}>Name</th>
+              <th style={tableHeaderStyle}>Message</th>
+              <th style={tableHeaderStyle}>Transaction Hash</th>
+            </tr>
+          </thead>
+          <tbody>
+            {memos.map((memo, index) => (
+              <tr key={index}>
+                <td style={tableCellStyle}>
+                  {new Date(memo.timestamp * 1000).toLocaleString()}
+                </td>
+                <td style={tableCellStyle}>{memo.name}</td>
+                <td style={tableCellStyle}>{memo.message}</td>
+                <td style={tableCellStyle}>{memo.from}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
       );
 }
 export default Memos;
+const tableHeaderStyle = {
+  backgroundColor: "dodgerblue",
+  border: "1px solid white",
+  padding: "7px",
+  width: "25%",
+  color: "white",
+};
+
+const tableCellStyle = {
+  backgroundColor: "lightblue",
+  border: "1px solid white",
+  padding: "7px",
+  width: "25%",
+};
