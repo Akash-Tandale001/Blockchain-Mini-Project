@@ -52,7 +52,7 @@ function App() {
   },[])
   return (
     <div >
-    <img src={chai} className="img-fluid" alt=".." width="100%" />
+    <img src={chai} className="imgs" alt=".." width="100%" />
     <p style={{ marginTop: "10px", marginLeft: "5px" }}>
     <h1 className='ht'>Connected Account - {account}</h1>
       {/* <small></small> */}

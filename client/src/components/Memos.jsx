@@ -43,7 +43,7 @@ const Memos=({state})=>{
 export default Memos;
 const tableHeaderStyle = {
   backgroundColor: "dodgerblue",
-  border: "1px solid white",
+  border: "2px solid white",
   padding: "7px",
   width: "25%",
   color: "white",
@@ -54,5 +54,5 @@ const tableCellStyle = {
   border: "1px solid white",
   padding: "7px",
   width: "25%",
-  textAlign:"center"
+  textAlign:"center",
 };
