@@ -4,7 +4,7 @@
   margin: 50px auto;
   padding: 30px;
   background: #fff;
-  border: 1px solid #E3E3E3;
+  border: 2px solid #E3E3E3;
   border-radius: 20px;
   font-family: 'Sansita Swashed', sans-serif;
 }
@@ -25,7 +25,7 @@
 
 .center .inputbox input {
   width: 100%;
-  border: 2px solid #000;
+  border: 1px solid #E3E3E3;
   outline: none;
   background: none;
   padding: 10px;

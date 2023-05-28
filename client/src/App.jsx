@@ -4,6 +4,7 @@ import {ethers} from "ethers"
 import Memos from './components/Memos'
 import Buy from './components/Buy'
 import chai from "./chai.png";
+import chaicup from "./chai-cup.png"
 import './App.css'
 
 function App() {
@@ -53,10 +54,12 @@ function App() {
     <div >
     <img src={chai} className="img-fluid" alt=".." width="100%" />
     <p style={{ marginTop: "10px", marginLeft: "5px" }}>
-      <small>Connected Account - {account}</small>
+    <h1 className='ht'>Connected Account - {account}</h1>
+      {/* <small></small> */}
     </p>
    
       <Buy state={state} />
+      <img src={chaicup} className="img-fluid" alt=".." width="100%" />
       <Memos state={state} />
    
   </div>
